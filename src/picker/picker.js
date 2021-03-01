@@ -270,7 +270,7 @@ export default {
       }
       this.pivots.forEach((pivot, i) => {
         const _diff = pivot + top
-        if (diff === null || Math.abs(diff) > Math.abs(_diff)) {
+        if (diff === null || Math.abs(this.scrollOffsetTop - diff) > Math.abs(this.scrollOffsetTop - _diff)) {
           index = i
           diff = _diff
         }
